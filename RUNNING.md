@@ -40,3 +40,11 @@ Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no 
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación — 2026-11-19 (API REST completa de Playlist en Laravel + gestor web interactivo)
+
+- **Cambios:** Implementados modelo `PlaylistTrack`, migración `create_playlist_tracks_table`, controlador REST validado `PlaylistController` (`index`, `show`, `store`, `update`, `destroy`) y rutas `/api/tracks` en `playlistcore`; añadido además `web-player/index.html` con cola persistente en `localStorage`, búsqueda, reordenamiento y tema claro/oscuro.
+- **Validación:** Verificación estructural PHP (4 archivos Laravel) + `node --check` (Node 24) sobre la lógica JS de `web-player/index.html`.
+<!-- improvements-20261119:end -->

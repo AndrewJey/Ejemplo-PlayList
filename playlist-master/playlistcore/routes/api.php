@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/tracks', 'PlaylistController@index');
+Route::get('/tracks/{id}', 'PlaylistController@show');
+Route::post('/tracks', 'PlaylistController@store');
+Route::put('/tracks/{id}', 'PlaylistController@update');
+Route::delete('/tracks/{id}', 'PlaylistController@destroy');
